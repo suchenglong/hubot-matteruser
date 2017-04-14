@@ -1,13 +1,13 @@
 FROM node:7.5.0-alpine
 
 RUN npm install -g yo generator-hubot
-RUN npm install -g hubot-matteruser
 RUN adduser -h /hubot -s /bin/sh -S hubot
 
 USER  hubot
 WORKDIR /hubot
 
 RUN yo hubot --owner="owner" --name="mybot" --description="mybot" --defaults --y
+RUN npm install hubot-matteruser
 
 #ENV MATTERMOST_HOST mm.com
 #ENV MATTERMOST_GROUP hubot
