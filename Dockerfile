@@ -8,6 +8,7 @@ WORKDIR /hubot
 
 RUN yo hubot --owner="owner" --name="mybot" --description="mybot" --defaults --y
 RUN npm install hubot-matteruser
+RUN npm install dom-js
 
 #ENV MATTERMOST_HOST mm.com
 #ENV MATTERMOST_GROUP hubot
